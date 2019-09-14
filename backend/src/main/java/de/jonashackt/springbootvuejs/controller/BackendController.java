@@ -2,7 +2,12 @@ package de.jonashackt.springbootvuejs.controller;
 
 import de.jonashackt.springbootvuejs.domain.User;
 import de.jonashackt.springbootvuejs.exception.UserNotFoundException;
+import de.jonashackt.springbootvuejs.forms.UserForm;
 import de.jonashackt.springbootvuejs.repository.UserRepository;
+
+import java.util.List;
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +25,7 @@ public class BackendController {
 
     @Autowired
     private UserRepository userRepository;
-    
+
     @RequestMapping(path = "/hello")
     public @ResponseBody String sayHello() {
         LOG.info("GET called on /hello resource");
@@ -28,14 +33,40 @@ public class BackendController {
     }
 
     @RequestMapping(path = "/user/{lastName}/{firstName}", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.CREATED)
-    public @ResponseBody long addNewUser (@PathVariable("lastName") String lastName, @PathVariable("firstName") String firstName) {
+
+    public @ResponseBody User addNewUser(@PathVariable("lastName") String lastName,
+            @PathVariable("firstName") String firstName) {
         User savedUser = userRepository.save(new User(firstName, lastName));
 
         LOG.info(savedUser.toString() + " successfully saved into DB");
 
-        return savedUser.getId();
+        return savedUser;
     }
+
+    @GetMapping("/getAllUsers")
+    public Iterable<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
+    @PostMapping("/deleteUser")
+    public void deleteUser(@RequestBody UserForm form) {
+        Optional<User> user = userRepository.findById(form.getId());
+
+        if(user.isPresent()){
+            userRepository.delete(user.get());
+        }
+    }
+
+    @PostMapping("/updateUser")
+    public User updateUser(@RequestBody UserForm form) {
+        User user = new User();
+        user.setId(form.getId());
+        user.setFirstName(form.getFirstName());
+        user.setLastName(form.getLastName());
+
+        return userRepository.save(user);
+    }
+
 
     @GetMapping(path = "/user/{id}")
     public @ResponseBody User getUserById(@PathVariable("id") long id) {

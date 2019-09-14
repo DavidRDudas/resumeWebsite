@@ -83,7 +83,7 @@
           <v-col cols="12">
             <div class="text-center body-2 text-uppercase">
               <div class=" sidebar-filter">
-                Thank You for Sharing!
+    
               </div>
 
               <div>
@@ -133,10 +133,7 @@
         'danger'
       ],
       images: [
-        'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-1.23832d31.jpg',
-        'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg',
-        'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-3.3a54f533.jpg',
-        'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-4.3b7e38ed.jpg'
+        'https://cdn.pixabay.com/photo/2017/03/30/20/25/polygon-2189646_960_720.jpg'
       ]
     }),
 

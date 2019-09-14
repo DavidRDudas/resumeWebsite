@@ -2,7 +2,7 @@
   <v-navigation-drawer
     id="app-drawer"
     v-model="inputValue"
-    :src="image"
+    src="https://cdn.pixabay.com/photo/2017/03/30/20/25/polygon-2189646_960_720.jpg"
     app
     color="grey darken-2"
     dark
@@ -64,7 +64,7 @@ export default {
       },
       {
         to: "/table-list",
-        icon: "mdi-clipboard-outline",
+        icon: "mdi-file-table-box-multiple-outline",
         text: "Table List"
       },
       {
