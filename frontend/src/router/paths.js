@@ -26,5 +26,9 @@ export default [
   {
     path: "/projects",
     view: "Projects"
+  },
+  {
+    path: "/resume",
+    view: "Resume"
   }
 ];

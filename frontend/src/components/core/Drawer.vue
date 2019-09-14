@@ -73,10 +73,16 @@ export default {
         text: "Projects"
       },
       {
+        to: "/resume",
+        icon: "mdi-file-outline",
+        text: "Resume"
+      },
+      {
         to: "/maps",
         icon: "mdi-map-marker",
         text: "My Location"
       }
+      
     ]
   }),
 
