@@ -2,7 +2,7 @@
   <v-navigation-drawer
     id="app-drawer"
     v-model="inputValue"
-    src="https://cdn.pixabay.com/photo/2017/03/30/20/25/polygon-2189646_960_720.jpg"
+    src="https://drive.google.com/uc?id=1oHWUdgOx6eVXgP5NCm2ihntChSY7U0a6"
     app
     color="grey darken-2"
     dark

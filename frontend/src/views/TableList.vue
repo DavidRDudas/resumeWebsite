@@ -50,7 +50,7 @@
       <v-col cols="12">
         <material-card
           title="Users"
-          text="Here is an example of a CRUD table on the users database"
+          text="Here is an example of CRUD operations on a table"
           color="primary"
         >
           <v-data-table :headers="headers" :items="items">

@@ -11,14 +11,16 @@
 
             <h4 class="font-weight-light">David Dudas</h4>
 
-            <p class="font-weight-light">Welcome to my resume page</p>
+            <p class="font-weight-light">I am currently enrolled as a student, while working full time. My interests vary from machine learning to computer graphics. I have a wide range of hobbies, but particularly focus on programming, game development, writing, reading, cycling, and photography </p>
 
             <v-btn color="primary" href="mailto:daviddudas@hotmail.com">Email Me</v-btn>
+
           </v-card-text>
         </material-card>
       </v-col>
     </v-row>
   </v-container>
+
 </template>
 
 <script>

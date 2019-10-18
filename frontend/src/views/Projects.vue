@@ -10,15 +10,21 @@
 
                 <p class="font-weight-light">A website I made</p>
 
-                <v-btn href="http://dudasengineering.com" target="_blank" color="success">Visit Page</v-btn>
+                <v-btn href="http://dudasengineering.com" target="_blank" color = "primary">Visit Page</v-btn>
               </v-card-text>
             </material-card>
           </v-container>
         </v-flex>
       </v-row>
     </v-container>
+
+     
+
+     
   </div>
 </template>
+
+
 
 <script>
 export default {};
